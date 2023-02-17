@@ -1,10 +1,29 @@
 import "./App.css";
-import EmailEditor from "react-email-editor";
+import Loginpage from "./pages/Loginpage";
+import Registerpage from "./pages/Registerpage";
+import Home from './pages/Home';
+import Error from './components/Error';
+import IndexPage from "./pages/IndexPage";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 
 function App() {
+
   return (
     <>
-      <EmailEditor />
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<IndexPage />} />
+          <Route path="/login" element={<Loginpage />} />
+          <Route path="/register" element={<Registerpage />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Router>
+
     </>
   );
 }
