@@ -9,6 +9,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import EmailEditor from "./pages/EmailEditor";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<IndexPage />} />
           <Route path="/login" element={<Loginpage />} />
           <Route path="/register" element={<Registerpage />} />
+          <Route path="/email-builder" element={<EmailEditor />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>

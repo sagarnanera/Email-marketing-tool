@@ -1,11 +1,15 @@
 import React from 'react'
 import EmailBuilder from '../components/EmailBuilder';
+import Navbar from '../components/Navbar';
 
 const EmailEditor = () => {
     return (
-        <div className="email-builder">
-            <EmailBuilder />
-        </div>
+        <>
+            <Navbar />
+            <div className="email-builder">
+                <EmailBuilder />
+            </div>
+        </>
     )
 }
 
