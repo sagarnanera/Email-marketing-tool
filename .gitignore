@@ -22,6 +22,10 @@ lib-cov
 coverage
 *.lcov
 
+# documentation directory
+Documentation
+
+
 # nyc test coverage
 .nyc_output
 

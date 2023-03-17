@@ -11,7 +11,7 @@ mongoose.connect(
     },
     (err) => {
         err ? console.log(err) : console.log(
-            "Connected to database")
+            "Connected to database 🔗")
     }
 );
 

@@ -6,10 +6,12 @@ const campScheduler = require('../schedulars/campScheduler')
 
 const app = express();
 
-let date = new Date(2023, 0, 26, 19, 10);
+// let date = new Date(2023, 0, 26, 19, 10);
 
-campScheduler(1008,date);
+// campScheduler(1008,date);
 
-console.log(date.toLocaleString());
+// console.log(date.toLocaleString());
+
+app.get()
 
 module.exports = app;

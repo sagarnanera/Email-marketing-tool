@@ -12,17 +12,29 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
 
-const pages = [
-    { name: 'Products', slug: 'products' },
-    { name: 'Pricing', slug: 'pricing' },
-    { name: 'Blog', slug: 'blog' },
-    { name: 'Login', slug: 'login' },
-    { name: 'Sing-up', slug: 'register' }
-];
 
-function Navbar() {
+// const pages = [
+//     { name: 'Products', slug: 'products' },
+//     { name: 'Pricing', slug: 'pricing' },
+//     { name: 'Blog', slug: 'blog' },
+//     { name: 'Login', slug: 'login' },
+//     { name: 'Sing-up', slug: 'register' }
+// ];
+
+function Navbar({navlinks}) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     // const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+    // const pages = [
+    //     { name: 'Pricing', slug: 'pricing' },
+    //     { name: 'Blog', slug: 'blog' },
+    //     { name: 'Login', slug: 'login' },
+    //     { name: 'Sing-up', slug: 'register' }
+    // ];
+
+    const pages = navlinks;
+
+    console.log(pages);
 
     const navigate = useNavigate();
 
@@ -117,7 +129,7 @@ function Navbar() {
                     >
                         LOGO
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },justifyContent:'flex-end' }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
                         {pages.map((page) => (
                             <Button
                                 key={page.name}
